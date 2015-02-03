@@ -69,3 +69,5 @@ heroku {
 
     appName = 'nprogramming-weather-service'
 }
+
+task stage(dependsOn: ['clean', 'oneJar'])
