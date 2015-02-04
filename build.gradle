@@ -10,16 +10,12 @@ mainClassName = 'com.nprogramming.weather.WeatherSearchApplication'
 buildscript {
     repositories {
         mavenCentral()
-        maven { url 'http://dl.bintray.com/vermeulen-mp/gradle-plugins' }
     }
 
     dependencies {
-        classpath "com.wiredforcode:gradle-heroku-plugin:1.0.0"
         classpath 'com.github.rholder:gradle-one-jar:1.0.3'
     }
 }
-
-apply plugin: 'heroku'
 
 project.ext {
     dropwizardVersion = '0.8.0-rc2'
@@ -63,11 +59,3 @@ test {
 }
 
 defaultTasks 'oneJar'
-
-heroku {
-    apiKey = 'a18ce1b8-7c0b-441f-a7e3-02f1c46aade5'
-
-    appName = 'nprogramming-weather-service'
-}
-
-task stage(dependsOn: ['clean', 'oneJar'])
