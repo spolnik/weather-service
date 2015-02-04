@@ -20,7 +20,7 @@
 
             var updateWeather = function (cityText) {
                 $.ajax({
-                    url: "/weather",
+                    url: "http://nprogramming-weather-service.herokuapp.com/weather",
                     data: {city: cityText},
                     dataType: 'json',
                     cache: false,
