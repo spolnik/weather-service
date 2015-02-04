@@ -3,9 +3,7 @@ package com.nprogramming.weather;
 import com.nprogramming.weather.data.OpenWeatherMapRepository;
 import com.nprogramming.weather.data.WeatherRepository;
 import io.dropwizard.Application;
-import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.client.JerseyClientBuilder;
-import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
 import javax.ws.rs.client.Client;
@@ -14,11 +12,6 @@ public class WeatherSearchApplication extends Application<WeatherSearchConfigura
 
     public static void main(String[] args) throws Exception {
         new WeatherSearchApplication().run(args);
-    }
-
-    @Override
-    public void initialize(Bootstrap<WeatherSearchConfiguration> bootstrap) {
-        bootstrap.addBundle(new AssetsBundle("/assets", "/app", "index.html", "assets"));
     }
 
     @Override
