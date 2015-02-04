@@ -12,7 +12,7 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import java.io.IOException;
 
-@Path("/weather")
+@Path("/current")
 @Produces(MediaType.APPLICATION_JSON)
 public class WeatherResource {
 
